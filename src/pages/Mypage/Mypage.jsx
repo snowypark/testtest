@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import WideButton from "../../components/WideButton/WideButton";
 import { useInput } from "../../hooks/useInput";
 import * as S from "./style";
@@ -83,7 +83,10 @@ function Mypage(props) {
         localStorage.getItem("user") 
         
     }
-
+    
+     useMemo(() => {
+        localStorage.getItem("user");
+        }, []);
    
     return (        
        

@@ -88,7 +88,7 @@ function PhotoRegister() {
        ; 
 
         if (window.confirm("이미지를 저장하시겠습니까?")) {
-        //    localStorage.setItem("photo", JSON.stringify(setNewFiles));
+           localStorage.setItem("photo", JSON.stringify(setNewFiles));
         } else {
             alert("취소합니다.");
             

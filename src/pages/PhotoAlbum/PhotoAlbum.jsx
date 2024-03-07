@@ -6,19 +6,21 @@
  *      문구가 중앙에 나오도록해야함.
  */
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 
 function PhotoAlbum() {
-            
-const [ preview, setPreview ] = useState("");
+    const imgFileRef = useRef();
 
-// const data = JSON.parse(
-//     localStorage.getItem("photo") );
+    const [ preview, setPreview ] = useState("");
+
+    useEffect(() => {
+        localStorage.getItem('photo')        
+      }, [])
 
     return (
         <div>
-            <img src={preview} alt="" />
+            <img src={preview} alt=""  />
         </div>
     );
 }
